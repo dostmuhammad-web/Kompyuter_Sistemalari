@@ -1,0 +1,139 @@
+:root {
+  --bg: #070b16;
+  --bg-glow: rgba(56, 214, 196, 0.13);
+  --panel: #0e1526;
+  --panel-2: #131d33;
+  --panel-3: #182541;
+  --line: #22304d;
+  --line-soft: #1a2540;
+  --text: #dde6f7;
+  --muted: #8d9dc0;
+  --accent: #38d6c4;
+  --accent-2: #7c9cff;
+  --accent-soft: rgba(56, 214, 196, 0.12);
+  --accent-line: rgba(56, 214, 196, 0.5);
+  --ok: #4ade80;
+  --bad: #ff7288;
+  --pcb: #0b2427;
+  --pcb-line: #1d4441;
+  --chip: #16304a;
+  --chip-hover: #1d3d5d;
+  --chip-line: #2b5075;
+  --chip-text: #cfe4f7;
+  --trace: rgba(56, 214, 196, 0.18);
+  --shadow: 0 24px 60px -30px rgba(0, 0, 0, 0.9);
+
+  color-scheme: dark;
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue",
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+:root[data-theme="light"] {
+  --bg: #eef2f9;
+  --bg-glow: rgba(15, 158, 142, 0.16);
+  --panel: #ffffff;
+  --panel-2: #f4f7fd;
+  --panel-3: #e9effa;
+  --line: #d7e0ef;
+  --line-soft: #e5ecf7;
+  --text: #14203a;
+  --muted: #5c6d8e;
+  --accent: #0e9c8c;
+  --accent-2: #4a6cf7;
+  --accent-soft: rgba(14, 156, 140, 0.1);
+  --accent-line: rgba(14, 156, 140, 0.45);
+  --ok: #16a34a;
+  --bad: #dc2643;
+  --pcb: #dcefe9;
+  --pcb-line: #bcdcd4;
+  --chip: #ffffff;
+  --chip-hover: #f1fbf8;
+  --chip-line: #b7d6cf;
+  --chip-text: #173a3a;
+  --trace: rgba(14, 156, 140, 0.25);
+  --shadow: 0 24px 50px -32px rgba(20, 40, 80, 0.45);
+
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100svh;
+  background:
+    radial-gradient(900px 520px at 12% -10%, var(--bg-glow), transparent 65%),
+    radial-gradient(700px 480px at 92% 4%, rgba(124, 156, 255, 0.12), transparent 60%),
+    var(--bg);
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+p {
+  margin: 0;
+}
+
+ul,
+ol,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+input {
+  font: inherit;
+}
+
+a {
+  color: var(--accent);
+}
+
+::selection {
+  background: var(--accent);
+  color: #04121a;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
